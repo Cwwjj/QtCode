@@ -1,0 +1,12 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\playcircledialog.o
+./release\newproject.o
+./release\newexperimentdialog.o
+./release\qrc_res.o
+./release\moc_mainwindow.o
+./release\moc_playcircledialog.o
+./release\moc_newprojectdialog.o
+./release\moc_newexperimentdialog.o
+);

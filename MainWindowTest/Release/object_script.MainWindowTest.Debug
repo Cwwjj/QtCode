@@ -1,0 +1,12 @@
+INPUT(
+./debug\main.o
+./debug\mainwindow.o
+./debug\playcircledialog.o
+./debug\newproject.o
+./debug\newexperimentdialog.o
+./debug\qrc_res.o
+./debug\moc_mainwindow.o
+./debug\moc_playcircledialog.o
+./debug\moc_newprojectdialog.o
+./debug\moc_newexperimentdialog.o
+);
