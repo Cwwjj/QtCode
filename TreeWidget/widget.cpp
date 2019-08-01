@@ -10,8 +10,10 @@ Widget::Widget(QWidget *parent) :
     ui->setupUi(this);
 
     initTreeWidget();
+    initTreeWidget_2();
     connect(ui->treeWidget,&QTreeWidget::itemClicked,this,&Widget::getItemText);
     //connect(ui->treeWidget,SIGNAL(itemClicked(QTreeWidgetItem*,int)),this,SLOT(getItemText(QTreeWidgetItem*,int)));
+    connect(ui->treeWidget_2,SIGNAL(itemChanged(QTreeWidgetItem*, int)),this, SLOT(treeItemChanged(QTreeWidgetItem*, int)));
 }
 
 Widget::~Widget()
@@ -31,7 +33,7 @@ void Widget::initTreeWidget()
 {
     ui->treeWidget->clear();
     ui->treeWidget->setColumnCount(1);
-    ui->treeWidget->setColumnWidth(0,600);
+    //ui->treeWidget->setColumnWidth(0,600);
     //隐藏标签头
     ui->treeWidget->setHeaderHidden(true);
 
@@ -144,13 +146,70 @@ void Widget::getItemText(QTreeWidgetItem* item, int column)
     ui->label->setText(itemText);
 }
 
+/**
+ @ brief:初始化带有复选框的树形控件
+ @ param:[in]
+ @ param:[out]
+ @ return:
+ @ author:xiaolei
+ @ data:2019-08-01
+ */
+void Widget::initTreeWidget_2()
+{
+    ui->treeWidget_2->clear();
+    ui->treeWidget_2->setColumnCount(1);
+    //ui->treeWidget_2->setColumnWidth(0,600);
+    //隐藏标签头
+    ui->treeWidget_2->setHeaderHidden(true);
+
+    QFont font("Microsoft YaHei", 10, 50);
+    QColor color=QColor(70,150,70);
+
+
+    //添加分组
+    QTreeWidgetItem *group1 = new QTreeWidgetItem(ui->treeWidget_2);
+
+    group1->setText(0,tr("Qt模块"));
+    //设置标志
+    group1->setFlags(Qt::ItemIsEnabled|Qt::ItemIsSelectable|Qt::ItemIsUserCheckable);
+    //设置未选中
+    group1->setCheckState(0,Qt::Unchecked);
+    group1->setExpanded(true);
+    group1->setFont(0,font);
+    group1->setTextColor(0,color);
+    //group1->setBackgroundColor(0,QColor(112,150,100));
+    ui->treeWidget->addTopLevelItem(group1);
+
+    //添加group1子项目
+    QStringList childItems1;
+    childItems1<<tr("Qt Core")<<tr("Qt GUI")<<tr("Qt Multimedia")<<tr("Qt Multimedia Widgets")<<tr("Qt Network")<<tr("Qt QML");
+    std::vector<QTreeWidgetItem *> subItems1;
+    subItems1.reserve(6);
+
+    for(int i=0;i<6;i++)
+    {
+        subItems1[i] = new QTreeWidgetItem(group1);
+        subItems1[i]->setFlags(Qt::ItemIsEnabled|Qt::ItemIsSelectable|Qt::ItemIsUserCheckable);
+        subItems1[i]->setCheckState(0,Qt::Unchecked);
+        subItems1[i]->setText(0, childItems1.at(i));
+    }
+}
+
+/**
+ @ brief:父项目与子项目相应的改变
+ @ param:[in]
+ @ param:[out]
+ @ return:
+ @ author:xiaolei
+ @ data:2019-08-01
+ */
 void Widget::treeItemChanged(QTreeWidgetItem* item, int column)
 {
-    QString itemText = item->text(0);
+    QString itemText = item->text(column);
     //选中时
-    if (Qt::Checked == item->checkState(0))
+    if (Qt::Checked == item->checkState(column))
     {
-           QTreeWidgetItem* parent = item->parent();
+           //子项目的个数
            int count = item->childCount();
            if (count > 0)
            {
@@ -166,7 +225,7 @@ void Widget::treeItemChanged(QTreeWidgetItem* item, int column)
                 updateParentItem(item);
            }
     }
-    else if (Qt::Unchecked == item->checkState(0))
+    else if (Qt::Unchecked == item->checkState(column))
     {
            int count = item->childCount();
            if (count > 0)
@@ -183,6 +242,14 @@ void Widget::treeItemChanged(QTreeWidgetItem* item, int column)
     }
 }
 
+/**
+ @ brief:更新项目选中状态
+ @ param:[in]
+ @ param:[out]
+ @ return:
+ @ author:xiaolei
+ @ data:2019-08-01
+ */
 void Widget::updateParentItem(QTreeWidgetItem* item)
 {
     QTreeWidgetItem *parent = item->parent();

@@ -27,6 +27,7 @@ public:
     QGridLayout *gridLayout;
     QTreeWidget *treeWidget;
     QLabel *label;
+    QTreeWidget *treeWidget_2;
 
     void setupUi(QWidget *Widget)
     {
@@ -52,6 +53,14 @@ public:
 "background-color: rgb(91, 91, 91);"));
 
         gridLayout->addWidget(label, 0, 1, 1, 1);
+
+        treeWidget_2 = new QTreeWidget(Widget);
+        QTreeWidgetItem *__qtreewidgetitem1 = new QTreeWidgetItem();
+        __qtreewidgetitem1->setText(0, QStringLiteral("1"));
+        treeWidget_2->setHeaderItem(__qtreewidgetitem1);
+        treeWidget_2->setObjectName(QStringLiteral("treeWidget_2"));
+
+        gridLayout->addWidget(treeWidget_2, 0, 2, 1, 1);
 
 
         retranslateUi(Widget);

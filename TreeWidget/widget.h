@@ -17,6 +17,7 @@ public:
     ~Widget();
     void updateParentItem(QTreeWidgetItem* item);
     void initTreeWidget();
+    void initTreeWidget_2();
 private:
     Ui::Widget *ui;
 
