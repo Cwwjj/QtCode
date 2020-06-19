@@ -9,3 +9,7 @@ https://github.com/MarsXiaolei/QtCode/blob/master/VS2015%E5%88%9B%E5%BB%BA%E5%92
 
 ### 绘制软件架构图
 https://www.zhihu.com/question/27440059<br>
+
+### 刘典武QT开源
+https://github.com/feiyangqingyun/QWidgetDemo
+https://www.zhihu.com/people/feiyangqingyun/
