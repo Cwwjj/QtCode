@@ -1,0 +1,45 @@
+/*
+QPushButton的使用
+1、基本属性设置
+2、实现按钮贴图以及常用的几种状态：enter、leave、press、release
+实现：
+样式表
+继承QPushButton
+贴图、背景透明
+事件过滤器
+3、自定义按钮类
+*/
+#include "QtWidgetsApplication2.h"
+#include <QMenu>
+
+QtWidgetsApplication2::QtWidgetsApplication2(QWidget *parent)
+    : QWidget(parent)
+{
+    ui.setupUi(this);
+	setWindowTitle("QPushButton");
+	m_pbRead = new QPushButton(this);
+	//m_pbRead->setText("Read");
+	m_pbRead->setGeometry(QRect(100,100,50,50));
+	m_pbRead->setMouseTracking(true);
+	//m_pbRead->resize(200,100);
+	//m_pbRead->setIcon(QIcon("F:\\images\\true_d4237a.png"));
+	//m_pbRead->setIconSize(QSize(50,50));
+	//m_pbRead->setStyleSheet("background:transparent;border:0px;");//背景透明
+	m_pbRead->setStyleSheet("QPushButton{border-image: url(:/QtWidgetsApplication2/F:/images/true_1afa29.png);}"
+                              "QPushButton:hover{border-image: url(:/QtWidgetsApplication2/F:/images/true_dbdbdb.png);}"
+		"QPushButton:pressed{border-image: url(:/QtWidgetsApplication2/F:/images/true_1296db.png);}");
+	m_pbRead->setEnabled(true);
+	//m_pbRead->setFont(QFont());
+	//m_pbRead->setStyleSheet();
+	//QMenu *menu_1 = new QMenu(this);
+	//m_pbRead->setMenu(menu_1);
+	//m_pbRead->setObjectName("");
+	//m_pbRead->setParent(this);
+	m_pbRead->setCheckable(true);
+	//m_pbRead->setShortcut(QKeySequence());
+	m_pbRead->setShortcutEnabled(true);
+	m_pbRead->setVisible(true);
+	m_pbRead->show();
+	//m_pbRead->hide();
+
+}
