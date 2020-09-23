@@ -3,7 +3,7 @@
 * `QString和int、float、double、string相互转换`<br>
 * `自定义对话框`<br>
 * `自定义按钮`<br>
-* `样式表`
+* `样式表`<br>
   [QT5:样式表](https://blog.csdn.net/mars_xiaolei/article/details/108747824)
 
 ### VS2015创建和调用lib类
