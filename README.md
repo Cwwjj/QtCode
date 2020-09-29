@@ -5,6 +5,10 @@
 * `自定义按钮`<br>
 * `样式表`<br>
   [QT5:样式表](https://blog.csdn.net/mars_xiaolei/article/details/108747824)
+  
+  
+#### FFMPEG
+[雷神-FFMPEG视音频编解码零基础学习方法](https://blog.csdn.net/leixiaohua1020/article/details/15811977)
 
 ### VS2015创建和调用lib类
 `文本文档，点download进行下载`<br>
