@@ -1,12 +1,6 @@
 # QtCode 使用Qt编写的代码<br>
 [了解GitHub-GFM语法规则](https://github.com/guodongxiaren/README "了解GitHub-GFM语法规则")<br>
 
-* `QString和int、float、double、string相互转换`<br>
-* `自定义对话框`<br>
-* `自定义按钮`<br>
-* `样式表`<br>
-  [QT5:样式表](https://blog.csdn.net/mars_xiaolei/article/details/108747824)
- 
 - [x] 自定义控件
 - [x] 信号槽
 - [x] 多线程
