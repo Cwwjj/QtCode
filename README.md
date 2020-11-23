@@ -11,6 +11,11 @@
 - [x] 信号槽
 - [x] 多线程
 - [x] 网络编程
+- [x] pro项目配置
+- [x] Qt安装
+- [x] qss样式表
+- [x] 代码规范
+- [x] 事件系统
   
 #### FFMPEG
 [雷神-FFMPEG视音频编解码零基础学习方法](https://blog.csdn.net/leixiaohua1020/article/details/15811977)
