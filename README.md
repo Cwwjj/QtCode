@@ -12,7 +12,7 @@
 - [x] 事件系统
 - [x] 使用Q_UNUSED宏处理不使用的形参
 - [x] 使用explicit防止类的构造函数发生隐式类型转换
-- [ ] 使用JSON `[](https://zhuanlan.zhihu.com/p/49951775)`
+- [ ] 使用JSON `https://zhuanlan.zhihu.com/p/49951775`
 
 ### 自定义控件案例
 - [ ] 电池
