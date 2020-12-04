@@ -19,19 +19,19 @@
 1、从QThread继承一个自定义类，并重定义虚函数run(),在run函数里实现线程需要完成的任务。
 2、
 
-Qt编程—去掉标题栏和设置窗口透明用法
+Qt编程—去掉标题栏和设置窗口透明用法<br>
 https://blog.csdn.net/liuyang1990i/article/details/8227342
 
-Qt 窗口操作函数（置顶、全屏，最大化最小化按钮设置等）
+Qt 窗口操作函数（置顶、全屏，最大化最小化按钮设置等）<br>
 https://www.cnblogs.com/linuxAndMcu/p/11533636.html
 
-QT 去掉标题栏和去掉标题栏后移动窗口
+QT 去掉标题栏和去掉标题栏后移动窗口<br>
 https://blog.csdn.net/mojianc/article/details/45111107
 
-Qt如何设置某个区域透明（稍微修改一下，可设置为某个区域颜色）
+Qt如何设置某个区域透明（稍微修改一下，可设置为某个区域颜色）<br>
 https://blog.csdn.net/jigetage/article/details/85101842
 
-QT显示图片的四种方法
+QT显示图片的四种方法<br>
 https://www.cnblogs.com/lifan3a/articles/8629412.html
 
 ### 自定义控件案例
